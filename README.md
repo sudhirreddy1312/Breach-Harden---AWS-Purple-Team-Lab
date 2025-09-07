@@ -52,6 +52,125 @@ Week 11 — Polish, demo video, README & playbook (create 7-minute demo and 1-pa
 
 Week 12 — Outreach & validation (post a walkthrough, link on LinkedIn/GitHub, prepare interview talking points).
 
+Day 01:
+
+# ✅ Step 1: Create GitHub repo
+
+1. Go to [GitHub](https://github.com/new).
+2. Repository name: `supplychain-sentinel`.
+3. Public (so others can see your journey).
+4. Initialize **without** README (we’ll add ours).
+5. Create repo.
+
+---
+
+# ✅ Step 2: Clone locally
+
+In your terminal:
+
+```bash
+git clone https://github.com/<your-username>/supplychain-sentinel.git
+cd supplychain-sentinel
+```
+
+---
+
+# ✅ Step 3: Create folder structure
+
+```bash
+mkdir demo-app ci infra docs
+```
+
+Now your tree looks like:
+
+```
+supplychain-sentinel/
+  ├── demo-app/
+  ├── ci/
+  ├── infra/
+  └── docs/
+```
+
+---
+
+# ✅ Step 4: Add `.gitignore`
+
+In root:
+
+```bash
+echo "node_modules/" >> .gitignore
+echo ".env" >> .gitignore
+```
+
+Check with:
+
+```bash
+cat .gitignore
+```
+
+Should show:
+
+```
+node_modules/
+.env
+```
+
+---
+
+# ✅ Step 5: Add README with project pitch + roadmap
+
+Create `README.md` in root:
+
+```markdown
+# SupplyChain Sentinel
+
+**Goal:** Build a reproducible lab to explore software supply chain security, from local dev to CI/CD pipeline.
+
+## Week 1 Plan — Project scaffolding
+- ✅ Day 1: GitHub repo + skeleton
+- ⬜ Day 2: Minimal Node.js demo app
+- ⬜ Day 3: Local npm registry (Verdaccio) via docker-compose
+- ⬜ Day 4: Publish demo-app to local registry
+- ⬜ Day 5: First GitHub Actions CI workflow
+
+---
+
+### 12-week Roadmap (high level)
+
+1. **Week 1:** Scaffolding, registry, first CI workflow  
+2. **Week 2:** SBOM generation & dependency scanning  
+3. **Week 3:** Container image scanning  
+4. **Week 4:** Secrets detection & policy checks  
+5. **Week 5:** Signing & verification basics  
+6. **Week 6:** Deploy to test infra  
+7. **Week 7:** Runtime monitoring basics  
+8. **Week 8:** Attack simulation (supply-chain scenarios)  
+9. **Week 9:** Secure pipeline improvements  
+10. **Week 10:** Policy enforcement as code  
+11. **Week 11:** Reporting & dashboards  
+12. **Week 12:** Final polish + presentation
+```
+
+---
+
+# ✅ Step 6: First commit + push
+
+```bash
+git add .
+git commit -m "Day 1: repo skeleton + README roadmap"
+git push origin main
+```
+
+---
+
+# 🎯 Deliverable
+
+* Repo exists on GitHub.
+* Has folders: `demo-app/`, `ci/`, `infra/`, `docs/`.
+* `.gitignore` in place.
+* `README.md` with short pitch + roadmap.
+* First commit pushed.
+
 
 Day 02:
 
