@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "axios": "^1.11.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "jest": "^30.1.3"
+  },
+  "name": "demo-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo ok"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

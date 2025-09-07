@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 
+=======
+node_modules/
+.env
+>>>>>>> 78811d0 (Day 1: repo structure + README roadmap)
