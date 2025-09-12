@@ -1,0 +1,9 @@
+version: '3'
+services:
+  verdaccio:
+    image: verdaccio/verdaccio:latest
+    ports:
+      - "4873:4873"
+    volumes:
+      - ./verdaccio/conf:/verdaccio/conf
+      - ./verdaccio/storage:/verdaccio/storage
