@@ -348,3 +348,58 @@ git push
   * `demo-app/index.js` → running web app.
   * `package.json` → dependencies + scripts.
   * Commit pushed to GitHub.
+
+Day 03:
+Here’s **Day 3 explained in very simple words**:
+
+---
+
+### 1. What is **npm**?
+
+* npm = **Node Package Manager**
+* It’s like an **app store for Node.js code**.
+* When you write an app, instead of writing everything yourself, you can download “packages” (ready-made code) using npm. Example: `express` (web server).
+
+---
+
+### 2. What is **Docker**?
+
+* Docker lets you run apps in **containers**.
+* A container is like a **mini computer inside your computer**: it has its own filesystem, runs isolated, and doesn’t mess with your main system.
+* You use Docker so you don’t have to install everything directly on your laptop.
+
+---
+
+### 3. What is **Verdaccio**?
+
+* Verdaccio is a **private npm registry**.
+* Think of it like your **own personal npm app store** running locally on your computer.
+* Why? Because in our project, we’ll simulate “bad packages” (malicious code). We don’t want to put that in the real public npm (unsafe).
+* Verdaccio lets you safely test publishing and installing fake packages only on your machine.
+
+---
+
+### 4. What did Day 3 actually do?
+
+* You wrote a `docker-compose.yml` file → tells Docker: “Hey, run Verdaccio for me.”
+* You ran `docker-compose up -d` → Docker started Verdaccio inside a container.
+* You opened `http://localhost:4873` → Verdaccio’s web UI → your local npm registry is now live.
+* Then you pointed npm to use Verdaccio:
+
+  ```bash
+  npm set registry http://localhost:4873/
+  ```
+
+  → means: “npm, don’t go to the global store, use my local Verdaccio store.”
+
+---
+
+### 5. Why is this important for the project?
+
+* Our big project is about **supply-chain security** → many attacks happen through fake/malicious npm packages.
+* With Verdaccio, we can **practice safely**:
+
+  * Create a malicious package
+  * Publish it locally (not to the real world)
+  * Install it in our app
+  * Later: build detection systems to catch it.
