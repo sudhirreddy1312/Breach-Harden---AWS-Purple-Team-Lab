@@ -52,7 +52,7 @@ Week 11 — Polish, demo video, README & playbook (create 7-minute demo and 1-pa
 
 Week 12 — Outreach & validation (post a walkthrough, link on LinkedIn/GitHub, prepare interview talking points).
 
-# **Day 01:**
+# **Day 01**
 
 # ✅ Step 1: Create GitHub repo
 
@@ -172,7 +172,7 @@ git push origin main
 * First commit pushed.
 
 
-# **Day 02:**
+# **Day 02**
 
 # Goal of Day 2
 
@@ -349,8 +349,8 @@ git push
   * `package.json` → dependencies + scripts.
   * Commit pushed to GitHub.
 
-# **Day 03:**
-Here’s **Day 3 explained in very simple words**:
+
+# **Day 03**
 
 ---
 
